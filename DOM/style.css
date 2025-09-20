@@ -1,0 +1,14 @@
+img {
+  padding: 0%;
+  width: 300px;
+}
+
+button {
+  display: block;
+  margin-top: 10px;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}

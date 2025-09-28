@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Event Handler</title>
+  </head>
+  <body>
+    <h1>Latihan Event Handler</h1>
+
+    <div class="main-content" hidden>
+      <h2>Jumlah Klik: <span id="counter">0</span></h2>
+      <button id="addButton">Tambah Angka</button>
+    </div>
+
+    <script>
+      function addbutton() {
+        document.getElementById("counter").innerText++;
+
+        if (document.getElementById("counter").innerText == 5) {
+          const hiddenmessage = document.createElement("h4");
+          hiddenmessage.innerText =
+            "Kamu sudah menekan tombol sebanyak 5 kali 🎉";
+
+          const mainContent = document.querySelector(".main-content");
+          mainContent.appendChild(hiddenmessage);
+        }
+
+        if (document.getElementById("counter").innerText == 10) {
+          const image = document.createElement("img");
+          image.setAttribute(
+            "src",
+            "https://raw.githubusercontent.com/dicodingacademy/a315-web-pemula-labs/shared-files/catto.jpg"
+          );
+
+          const mainContent = document.querySelector(".main-content");
+          mainContent.appendChild(image);
+        }
+      }
+
+      function welcome() {
+        alert("Selamat datang di halaman interaktif sederhana!");
+        document.querySelector(".main-content").removeAttribute("hidden");
+      }
+
+      document.getElementById("addButton").onclick = addbutton;
+      document.body.onload = welcome;
+    </script>
+  </body>
+</html>

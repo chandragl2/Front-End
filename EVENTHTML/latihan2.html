@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Event Handler</title>
+  </head>
+  <body>
+    <h1>Latihan Event Handler</h1>
+
+    <div class="main-content" hidden>
+      <h2>Jumlah Klik: <span id="counter">0</span></h2>
+      <button id="addButton">Tambah Angka</button>
+    </div>
+
+    <script>
+      function addButton() {
+        const counter = document.getElementById("counter");
+        counter.innerText++;
+
+        const actions = {
+          5: () => {
+            const msg = document.createElement("h4");
+            msg.textContent = "Kamu sudah menekan tombol sebanyak 5 kali 🎉";
+            document.querySelector(".main-content").appendChild(msg);
+          },
+          10: () => {
+            const img = document.createElement("img");
+            img.src = "https://placekitten.com/200/200";
+            document.querySelector(".main-content").appendChild(img);
+          },
+        };
+
+        actions[counter.innerText]?.(); // jalankan aksi jika ada
+      }
+
+      function welcome() {
+        alert("Selamat datang di halaman interaktif sederhana!");
+        document.querySelector(".main-content").removeAttribute("hidden");
+      }
+
+      document.getElementById("addButton").onclick = addButton;
+      document.body.onload = welcome;
+    </script>
+  </body>
+</html>

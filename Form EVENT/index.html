@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Form World</title>
+  </head>
+  <body>
+    <div class="contents">
+      <h2 align="center">Isi Data Diri</h2>
+
+      <div class="formContent">
+        <form id="formDataDiri">
+          <div class="form-element">
+            <label for="inputNama">Nama :</label><br />
+            <input type="text" id="inputNama" name="inputNama" required /><br />
+          </div>
+
+          <div class="form-element">
+            <label for="inputDomisili">Domisili :</label><br />
+            <input
+              type="text"
+              id="inputDomisili"
+              name="inputDomisili"
+              placeholder="Domisili saat ini"
+              required
+            />
+            <br />
+          </div>
+
+          <div class="form-element">
+            <input type="submit" value="submit Data" />
+          </div>
+        </form>
+      </div>
+
+      <h3 id="messageAfterSubmit"></h3>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
